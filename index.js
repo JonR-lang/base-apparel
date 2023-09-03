@@ -5,7 +5,7 @@ const errorIcon = document.querySelector('#icon-error')
 
 submitForm.addEventListener('submit', (e) => {
     const email = input.value
-    if (!emailRegex.test(email)) {
+    if (!validateEmail(email)) {
         warningMessage.textContent = "Please provide a valid email !"
         errorIcon.style.display = 'block'
         e.preventDefault()
